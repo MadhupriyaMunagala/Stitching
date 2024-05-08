@@ -9,6 +9,36 @@
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
       <title>Training Center</title>
+      <style>
+         .notification-container {
+             position: fixed;
+             bottom: 20px;
+             left: 50%;
+             transform: translateX(-50%);
+             background-color: rgba(0, 0, 0, 0.8);
+             color: #fff;
+             padding: 10px 20px;
+             border-radius: 5px;
+             display: none;
+         }
+         
+         .notification-container.show {
+             display: block;
+         }
+         
+         .notification-content {
+             display: flex;
+             align-items: center;
+         }
+         
+         .notification-message {
+             flex-grow: 1;
+         }
+         
+         .notification-cancel {
+             cursor: pointer;
+         }
+         </style>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -422,7 +452,7 @@
          </div>
      </div>
      
-     <script>
+   <script>
      let notifications = document.getElementById('notification');
      let ads = ['https://bookshop-bookshop.netlify.app',  'https://addtheadd.com','https://bvsadd.netlify.app','https://mechanics.netlify.app']; // Deep link URLs of ads
      let currentIndex = 0;
@@ -443,7 +473,7 @@
      }
      
      displayAd(); // Start displaying ads
-     </script>
+   </script>
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
